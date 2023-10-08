@@ -1,0 +1,1587 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        .main {
+            height: 100vh;
+            width: 100%;
+            background-color: rgb(34, 33, 39);
+            padding: 1px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slide1 {
+            height: 100vh;
+            width: 60%;
+            background-image: url(https://helion.axiomthemes.com/wp-content/uploads/2019/11/main-slider-img-copyright.png);
+            background-position: center;
+            background-size: cover;
+            position: absolute;
+            top: 100%;
+            left: 20%;
+            animation: slide1 10s linear infinite;
+        }
+
+        @keyframes slide1 {
+            0% {
+                top: 100%;
+            }
+
+            10% {
+                top: 0;
+            }
+
+            50% {
+                top: 0;
+            }
+
+            50.1% {
+                top: -100%;
+            }
+
+            100% {
+                top: -100%;
+            }
+        }
+
+        .slide2 {
+            height: 100vh;
+            width: 60%;
+            margin: auto;
+            background-image: url(https://helion.axiomthemes.com/wp-content/uploads/2019/11/main-slider-img2-copyright.png);
+            background-position: center;
+            background-size: cover;
+            position: absolute;
+            top: 100%;
+            left: 20%;
+            animation: slide2 10s linear infinite;
+        }
+
+        @keyframes slide2 {
+            0% {
+                top: 100%;
+            }
+
+            10% {
+                top: 100%;
+            }
+
+            50% {
+                top: 100%;
+            }
+
+            60% {
+                top: 0%;
+            }
+
+            100% {
+                top: 0%;
+            }
+
+        }
+
+        .navbar {
+            height: 80px;
+            width: 90%;
+            position: absolute;
+            left: 5%;
+            z-index: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            height: 25px;
+            width: 11%;
+
+        }
+
+        .img {
+            height: 100%;
+            width: 100%;
+        }
+
+        .navlist {
+            height: 30px;
+            width: 45%;
+        }
+
+        .list {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .home {
+            text-decoration: line-through;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .dropdown {
+            height: 320px;
+            width: 520px;
+            background-color: white;
+            position: absolute;
+            top: 50px;
+            visibility: hidden;
+            transition: .34s;
+            display: flex;
+        }
+
+        .d1 {
+            height: 100%;
+            width: 50%;
+            color: rgba(0, 0, 0, 0.614);
+            line-height: 30px;
+        }
+
+        .p8 {
+            color: rgba(255, 0, 0, 0.791);
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+
+        .d2 {
+            height: 100%;
+            width: 50%;
+            color: rgba(0, 0, 0, 0.614);
+            line-height: 30px;
+        }
+
+        .dropdown1 {
+            height: 80px;
+            width: 200px;
+            background-color: white;
+            position: absolute;
+            top: 50px;
+            visibility: hidden;
+            transition: .34s;
+            color: rgba(0, 0, 0, 0.614);
+            line-height: 30px;
+        }
+
+        .dropdown2 {
+            height: 80px;
+            width: 200px;
+            background-color: white;
+            position: absolute;
+            top: 50px;
+            visibility: hidden;
+            transition: .34s;
+            color: rgba(0, 0, 0, 0.614);
+            line-height: 30px;
+        }
+
+        .dropdown3 {
+            height: 140px;
+            width: 200px;
+            background-color: white;
+            position: absolute;
+            top: 50px;
+            visibility: hidden;
+            transition: .34s;
+            color: rgba(0, 0, 0, 0.614);
+            line-height: 30px;
+        }
+
+        .home:hover .dropdown {
+            visibility: visible;
+        }
+
+        .page {
+            cursor: pointer;
+        }
+
+        .page:hover {
+            text-decoration: line-through;
+        }
+
+        .page:hover .dropdown1 {
+            visibility: visible;
+        }
+
+        .about {
+            cursor: pointer;
+        }
+
+        .about:hover {
+            text-decoration: line-through;
+        }
+
+        .about:hover .dropdown2 {
+            visibility: visible;
+        }
+
+        .blog {
+            cursor: pointer;
+        }
+
+        .blog:hover {
+            text-decoration: line-through;
+        }
+
+        .blog:hover .dropdown3 {
+            visibility: visible;
+        }
+
+        .store {
+            cursor: pointer;
+        }
+
+        .store:hover {
+            text-decoration: line-through;
+        }
+
+        .contact {
+            cursor: pointer;
+        }
+
+        .contact:hover {
+            text-decoration: line-through;
+        }
+
+        .contact:hover .dropdown2 {
+            visibility: visible;
+        }
+
+        .icons {
+            height: 30px;
+            width: 7%;
+            display: flex;
+        }
+
+        .icon1 {
+            height: 100%;
+            width: 50%;
+            font-size: 25px;
+        }
+
+        .icon2 {
+            height: 100%;
+            width: 50%;
+            font-size: 25px;
+        }
+
+        .p1 {
+            color: white;
+            font-weight: bold;
+            font-size: 65px;
+            text-align: center;
+            margin-top: 250px;
+        }
+
+        .p11 {
+            color: white;
+            font-weight: bold;
+            font-size: 65px;
+            text-align: center;
+            /* margin-top: 250px; */
+        }
+
+        .btn {
+            height: 60px;
+            width: 200px;
+            border: 2px solid white;
+            margin-left: 280px;
+            cursor: pointer;
+            font-weight: bold;
+            background: none;
+            color: white;
+        }
+
+        .button {
+            height: 30px;
+            width: 20px;
+            border-radius: 40px;
+            border: 3px solid white;
+            margin-left: 380px;
+            margin-top: 10px;
+            animation: updown 5s ease-in infinite;
+        }
+
+        .line {
+            height: 8px;
+            border: 2px solid white;
+            width: 1px;
+            margin-left: 5px;
+            margin-top: 10px;
+            border-radius: 2px;
+        }
+
+        @keyframes updown {
+            0% {
+                transform: translateY(20px);
+            }
+
+            20% {
+                transform: translateY(10px);
+
+            }
+
+            40% {
+                transform: translateY(20px);
+            }
+
+            60% {
+                transform: translateY(5px);
+            }
+
+            80% {
+                transform: translateY(20px);
+            }
+
+            100% {
+                transform: translateY(10px);
+            }
+
+
+        }
+
+        .p2 {
+            color: white;
+        }
+
+        .p3 {
+            color: white;
+            margin-top: 300px;
+            text-align: center;
+        }
+
+        .p4 {
+            color: white;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .section1 {
+            height: 100vh;
+            width: 100%;
+            background-color: rgb(248, 245, 242);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .diamond {
+            height: 60vh;
+            width: 30%;
+            background-image: url(https://helion.axiomthemes.com/wp-content/uploads/2019/04/img-3-copyright.png);
+            background-position: center;
+            background-size: cover;
+            transition: .34s;
+        }
+
+        .diamond:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .design {
+            height: 80vh;
+            width: 40%;
+        }
+
+        .blk {
+            height: 3px;
+            width: 50px;
+            background-color: rgba(0, 0, 0, 0.772);
+            margin-top: 50px;
+            display: inline-block;
+
+        }
+
+        .p5 {
+            color: rgba(0, 0, 0, 0.772);
+            display: inline-block;
+            font-weight: bold;
+            font-size: 14px;
+            margin-left: 20px;
+
+
+        }
+
+        .p6 {
+            font-size: 35px;
+            font-weight: bold;
+            margin-top: 30px;
+            letter-spacing: 1px;
+            color: rgba(0, 0, 0, 0.86);
+        }
+
+        .p7 {
+            letter-spacing: 1px;
+            margin-top: 30px;
+            color: rgba(0, 0, 0, 0.657);
+        }
+
+        .btn1 {
+            height: 50px;
+            width: 200px;
+            border: 3px solid black;
+            border-radius: 5px;
+            margin-top: 20px;
+            background: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .btn1:hover {
+            background-color: black;
+            color: white;
+        }
+
+        .p9 {
+            margin-left: 20px;
+        }
+
+        .p10 {
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+
+        .section2 {
+            height: 80vh;
+            width: 100%;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .parent {
+            height: 60vh;
+            width: 90%;
+            display: flex;
+        }
+
+        .child {
+            height: 100%;
+            width: 33%;
+        }
+
+        .plan {
+            height: 80px;
+            width: 80px;
+            margin: auto;
+            transition: .34s;
+            margin-top: 40px;
+        }
+
+        .child:hover .plan {
+            transform: translateY(-20px);
+        }
+
+        .radio {
+            height: 80px;
+            width: 80px;
+            margin: auto;
+            margin-top: 40px;
+            transition: .34s;
+        }
+
+        .child:hover .radio {
+            transform: translateY(-20px);
+        }
+
+        .headphone {
+            height: 80px;
+            width: 80px;
+            margin: auto;
+            margin-top: 40px;
+            transition: .34s;
+        }
+
+        .child:hover .headphone {
+            transform: translateY(-20px);
+        }
+
+
+        .p12 {
+            font-size: 30px;
+            text-align: center;
+            font-weight: bold;
+            margin-top: 40px;
+        }
+
+        .p13 {
+            font-size: 13px;
+            letter-spacing: 1px;
+            margin-top: 20px;
+            text-align: center;
+            color: rgba(0, 0, 0, 0.706);
+        }
+
+        .arrow {
+            height: 40px;
+            width: 40px;
+            border-radius: 50px;
+            background-color: rgb(248, 245, 242);
+            margin: auto;
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .fa-rocket {
+            font-size: 70px;
+        }
+
+        .fa-radio {
+            font-size: 70px;
+        }
+
+        .fa-headphones {
+            font-size: 70px;
+        }
+
+        .section3 {
+            display: grid;
+            grid-template-columns: repeat(4, 25%);
+            grid-template-rows: repeat(2, 300px);
+        }
+
+        .box:nth-child(1) {
+            grid-column: 1 / 3;
+            grid-row: 1 / 3;
+        }
+
+        .box:nth-child(4) {
+            grid-column: 3 / 5;
+        }
+
+        .box1 {
+            background-image: url(https://helion.axiomthemes.com/wp-content/uploads/2019/04/port-1-copyright.jpg);
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+
+        .one {
+            height: 25px;
+            width: 150px;
+            background-color: white;
+            position: absolute;
+            bottom: 70px;
+            left: 20px;
+            color: rgba(0, 0, 0, 0.483);
+            text-align: center;
+            visibility: hidden;
+            transition: .34s;
+        }
+
+        .two {
+            height: 40px;
+            width: 280px;
+            background-color: white;
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+            visibility: hidden;
+        }
+
+        .box1:hover .one {
+            visibility: visible;
+        }
+
+        .box1:hover .two {
+            visibility: visible;
+        }
+
+        .p14 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-left: 10px;
+
+        }
+
+        .p15 {
+            margin-left: 50px;
+        }
+
+        .box2 {
+            background-image: url(https://helion.axiomthemes.com/wp-content/uploads/2019/04/port-2-copyright-740x580.jpg);
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+
+        .box2:hover .one {
+            visibility: visible;
+        }
+
+        .box2:hover .two {
+            visibility: visible;
+        }
+
+        .box3 {
+            background-image: url(https://helion.axiomthemes.com/wp-content/uploads/2019/04/port-6-copyright-740x580.jpg);
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+
+        .box3:hover .one {
+            visibility: visible;
+        }
+
+        .box3:hover .two {
+            visibility: visible;
+        }
+
+        .box4 {
+            background-image: url(https://helion.axiomthemes.com/wp-content/uploads/2019/04/post-7-copyright.jpg);
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+
+        .box4:hover .one {
+            visibility: visible;
+        }
+
+        .box4:hover .two {
+            visibility: visible;
+        }
+
+        .section4 {
+            height: 190vh;
+            width: 100%;
+            background-color: white;
+        }
+
+        .p16 {
+            font-size: 13px;
+            margin-top: 100px;
+            text-align: center;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .p17 {
+            font-size: 35px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .slider {
+            height: 80vh;
+            width: 1120px;
+            margin: auto;
+            margin-top: 30px;
+            overflow: hidden;
+        }
+
+        .pg1 {
+            height: 100%;
+            width: 2620px;
+            display: flex;
+            justify-content: space-between;
+            animation: fade 10s linear infinite;
+        }
+
+        @keyframes fade {
+            0% {
+                margin-left: 0;
+
+            }
+
+            20% {
+                margin-left: 0;
+
+            }
+
+            21% {
+                margin-left: -380px;
+
+            }
+
+            40% {
+                margin-left: -380px;
+
+            }
+
+            41% {
+                margin-left: -760px;
+
+            }
+
+            60% {
+                margin-left: -760px;
+
+            }
+
+            61% {
+                margin-left: -1140px;
+
+            }
+
+            80% {
+                margin-left: -1140px;
+
+            }
+
+            81% {
+                margin-left: -1500px;
+
+            }
+
+            100% {
+                margin-left: -1500px;
+
+            }
+        }
+
+        .msg {
+            height: 100%;
+            width: 350px;
+        }
+
+        .six {
+            height: 50vh;
+            width: 100%;
+            border: 1px solid rgba(0, 0, 0, 0.163);
+            border-radius: 5px;
+        }
+
+        .p18 {
+            text-align: center;
+            color: rgba(0, 0, 0, 0.508);
+            margin-top: 100px;
+            line-height: 20px;
+            font-size: 17px;
+            letter-spacing: 1px;
+        }
+
+        .six1 {
+            height: 60px;
+            width: 60px;
+            border-radius: 50px;
+            margin: auto;
+            margin-top: 20px;
+            background-image: url(https://helion.axiomthemes.com/wp-content/uploads/2019/04/2test-copyright-480x480.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .six2 {
+            height: 60px;
+            width: 60px;
+            border-radius: 50px;
+            margin: auto;
+            margin-top: 20px;
+            background-image: url(https://helion.axiomthemes.com/wp-content/uploads/2019/04/4test-copyright-480x480.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .six3 {
+            height: 60px;
+            width: 60px;
+            border-radius: 50px;
+            margin: auto;
+            margin-top: 20px;
+            background-image: url(https://helion.axiomthemes.com/wp-content/uploads/2019/04/1test-copyright-480x480.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .six4 {
+            height: 60px;
+            width: 60px;
+            border-radius: 50px;
+            margin: auto;
+            margin-top: 20px;
+            background-image: url(https://helion.axiomthemes.com/wp-content/uploads/2019/04/3test-copyright-480x480.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .p19 {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .p20 {
+            text-align: center;
+            color: rgba(0, 0, 0, 0.508);
+            margin-top: 10px;
+
+        }
+
+        .imagess {
+            height: 300px;
+            width: 90%;
+            margin: auto;
+            margin-top: 100px;
+        }
+
+        .new {
+            height: 110px;
+            width: 22%;
+            border: 1px solid;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 30px;
+            margin-top: 20px;
+            border-radius: 5px;
+            border: 1px solid rgba(0, 0, 0, 0.267);
+            transition: .34s;
+        }
+
+        .new img {
+            opacity: 0.3;
+        }
+        .new:hover .img{
+            opacity: 1;
+        }
+
+        .section5 {
+            height: 150vh;
+            width: 100%;
+            background-color: rgb(248, 245, 242);
+        }
+
+        .blk1 {
+            height: 2px;
+            width: 60px;
+            background-color: rgba(0, 0, 0, 0.772);
+            margin-top: 150px;
+            display: inline-block;
+            margin-left: 80px;
+
+        }
+
+        .p22 {
+            color: rgba(0, 0, 0, 0.772);
+            display: inline-block;
+            font-weight: bold;
+            font-size: 16px;
+            margin-left: 20px;
+
+
+        }
+
+        .p23 {
+            font-size: 40px;
+            font-weight: bold;
+            margin-left: 80px;
+            margin-top: 30px;
+        }
+
+        .animation {
+            height: 80vh;
+            width: 90%;
+            margin: auto;
+            margin-top: 100px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .ani1 {
+            height: 100%;
+            width: 32%;
+            border-radius: 5px;
+        }
+
+        .animate1 {
+            height: 50vh;
+            width: 100%;
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+
+        }
+
+        .pic {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            transition: .34s;
+
+        }
+
+        .pic:hover {
+            transform: scale(1.1);
+        }
+
+        .animate2 {
+            height: 50vh;
+            width: 100%;
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .animate3 {
+            height: 50vh;
+            width: 100%;
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .p24 {
+            color: red;
+            font-size: 12px;
+            margin-top: 20px;
+            font-weight: bold;
+
+        }
+
+        .p25 {
+            font-size: 14px;
+            color: rgba(0, 0, 0, 0.371);
+            margin-left: 30px;
+        }
+
+        .p26 {
+            font-weight: bold;
+            font-size: 25px;
+            margin-top: 20px;
+        }
+
+        .p27 {
+            font-size: 13px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .section6 {
+            height: 400px;
+            width: 100%;
+            background-color: white;
+        }
+
+        .circle {
+            height: 40px;
+            width: 40px;
+            border: 1px solid rgba(0, 0, 0, 0.336);
+            border-radius: 50px;
+            margin-left: 850px;
+            margin-top: -20px;
+        }
+
+        .p28 {
+            margin-left: 900px;
+            font-size: 12px;
+            margin-top: -35px;
+        }
+
+        .ri8 {
+            margin-left: 1200px;
+            margin-top: -80px;
+            font-size: 30px;
+        }
+
+        .section7 {
+            height: 400px;
+            width: 100%;
+            display: flex;
+        }
+
+        .red {
+            height: 100%;
+            width: 50%;
+            background-image: url(https://helion.axiomthemes.com/wp-content/uploads/2019/08/extra_bg-1.png);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .orange {
+            height: 100%;
+            width: 50%;
+            background-image: url(https://helion.axiomthemes.com/wp-content/uploads/2019/08/extra_bg-2.png);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .rock {
+            height: 60px;
+            width: 60px;
+            margin-top: 100px;
+            margin-left: 50px;
+        }
+
+        .tex1 {
+            color: white;
+            font-size: 15px;
+            font-weight: bold;
+            margin-left: 50px;
+            margin-top: 30px;
+        }
+
+        .tex2 {
+            color: white;
+            font-weight: bold;
+            margin-left: 50px;
+            margin-top: 20px;
+            font-size: 35px;
+        }
+
+        .btn2 {
+            height: 50px;
+            width: 200px;
+            border: 2px solid white;
+            background: none;
+            margin-left: 50px;
+            margin-top: 30px;
+            cursor: pointer;
+            color: white;
+            font-weight: bold;
+        }
+
+        .btn2:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .hyn {
+            font-size: 50px;
+        }
+
+        .section8 {
+            height: 100vh;
+            width: 100%;
+            background-color: rgb(26, 26, 31);
+            padding: 1px;
+
+        }
+
+        .index {
+            height: 350px;
+            width: 80%;
+            margin: auto;
+            margin-top: 100px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .logo1 {
+            height: 25px;
+            width: 130px;
+        }
+
+        .office {
+            height: 100%;
+            width: 200px;
+        }
+
+        .tex3 {
+            color: white;
+            font-weight: bold;
+            font-size: 17px;
+        }
+
+        .tex4 {
+            font-size: 16px;
+            margin-top: 20px;
+            line-height: 25px;
+            color: rgba(220, 220, 220, 0.772);
+        }
+
+        .tex5 {
+            margin-top: 20px;
+            font-size: 16px;
+            color: rgba(220, 220, 220, 0.772);
+            text-decoration: underline;
+        }
+
+        .tex6 {
+            margin-top: 20px;
+            font-size: 16px;
+            color: rgba(220, 220, 220, 0.772);
+            font-weight: bold;
+            cursor: pointer;
+
+        }
+
+        .tex6:hover {
+            color: white;
+        }
+
+        .links {
+            height: 100%;
+            width: 150px;
+        }
+
+        .ull {
+            margin-top: 20px;
+            font-size: 16px;
+            color: rgba(220, 220, 220, 0.772);
+            list-style: none;
+            line-height: 35px;
+            cursor: pointer;
+
+        }
+
+        .socials {
+            height: 100%;
+            width: 250px;
+        }
+
+        .for {
+            height: 30px;
+            width: 120px;
+            margin-top: 20px;
+            display: flex;
+        }
+
+        .foe1 {
+            height: 100%;
+            width: 25%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .borderbtm {
+            width: 90%;
+            border: 1px solid rgba(220, 220, 220, 0.175);
+            margin: auto;
+        }
+
+        .tex7 {
+            font-size: 16px;
+            margin-left: 5%;
+            margin-top: 40px;
+            color: rgba(220, 220, 220, 0.772);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="navbar">
+            <div class="logo">
+                <img class="img" src="https://helion.axiomthemes.com/wp-content/uploads/2019/05/logo-inverse.png"
+                    alt="">
+            </div>
+            <div class="navlist">
+                <ul class="list">
+                    <li class="home">Home.
+                        <div class="dropdown">
+                            <div class="d1">
+                                <p class="p8">Design Agency</p>
+                                <p class="p9">Photographer 2</p>
+                                <p class="p9">Personal</p>
+                                <p class="p9">Graphic Designer</p>
+                                <p class="p9">Concept Artist</p>
+                                <p class="p9">Motion Graphics</p>
+                                <p class="p9">Musician</p>
+                                <p class="p9">Copywriter</p>
+                                <p class="p9">NFT</p>
+
+                            </div>
+                            <div class="d2">
+                                <p class="p10">Photographer 1</p>
+                                <p class="p9">Photographer 3</p>
+                                <p class="p9">3D Artist</p>
+                                <p class="p9">Architect</p>
+                                <p class="p9">Character Designer</p>
+                                <p class="p9">Showcase</p>
+                                <p class="p9">Videographer</p>
+                                <p class="p9">Brutalism</p>
+                                <p class="p9">Home RTL</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="page">Pages.
+                        <div class="dropdown1">
+                            <p class="p10">Portfolio</p>
+                            <p class="p9">Tools</p>
+                        </div>
+                    </li>
+                    <li class="about">About Us.
+                        <div class="dropdown2">
+                            <p class="p10">Agency</p>
+                            <p class="p9">Personal</p>
+                        </div>
+                    </li>
+                    <li class="blog">Blog.
+                        <div class="dropdown3">
+                            <p class="p10">All Posts</p>
+                            <p class="p9">Classic Style</p>
+                            <p class="p9">Portfolio Style</p>
+                            <p class="p9">Chess Style</p>
+                        </div>
+                    </li>
+                    <li class="store">Store.</li>
+                    <li class="contact">Contacts.
+                        <div class="dropdown2">
+                            <p class="p10">Agency</p>
+                            <p class="p9">Personal</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="icons">
+                <div class="icon1">
+                    <i class="fa-solid fa-bag-shopping" style="color: #ffffff;"></i>
+                </div>
+                <div class="icon2">
+                    <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+                </div>
+            </div>
+        </div>
+        <div class="slide1">
+            <p class="p1">We Design & Build <br> Unique Things</p>
+            <button class="btn">Get in touch</button>
+            <div class="button">
+                <div class="line"></div>
+            </div>
+            <p class="p4">Scroll for more</p>
+        </div>
+        <div class="slide2">
+            <p class="p3">Creative Solutions</p>
+            <p class="p11">We Design & Build <br> Unique Things
+            <p>
+            <div class="button">
+                <div class="line"></div>
+            </div>
+            <p class="p4">Scroll for more</p>
+        </div>
+    </div>
+    <div class="section1">
+        <div class="diamond"></div>
+        <div class="design">
+            <div class="blk"></div>
+            <p class="p5">Who We Are</p>
+            <p class="p6">We design & build <br>
+                ultimate things</p>
+            <p class="p7">We want our clients to feel awesome and unique. Let us bring <br> your projects to another
+                level!</p>
+            <button class="btn1">Our Services</button>
+        </div>
+    </div>
+    <div class="section2">
+        <div class="parent">
+            <div class="child">
+                <div class="plan">
+                    <i class="fa-solid fa-rocket" style="color: #d60a1f;"></i>
+                </div>
+                <p class="p12">Creative Design</p>
+                <p class="p13">Design to us is something magical – we are <br> lucky that our clients let us get
+                    creative and <br> build new products</p>
+                <div class="arrow">
+                    <i class="fa-solid fa-arrow-right" style="color: #19191a;"></i>
+                </div>
+            </div>
+            <div class="child">
+                <div class="radio">
+                    <i class="fa-solid fa-radio" style="color:  #d60a1f;"></i>
+                </div>
+                <p class="p12">Development</p>
+                <p class="p13">Every single project is a challenge that we <br> accept eagerly. Let’s implement
+                    innovative <br> ideas together!</p>
+                <div class="arrow">
+                    <i class="fa-solid fa-arrow-right" style="color: #19191a;"></i>
+                </div>
+            </div>
+            <div class="child">
+                <div class="headphone">
+                    <i class="fa-solid fa-headphones" style="color: #d60a1f ;"></i>
+                </div>
+                <p class="p12">Support</p>
+                <p class="p13">Our technical support team is willing to solve <br> any inquiry that comes from our
+                    clients within <br> minutes</p>
+                <div class="arrow">
+                    <i class="fa-solid fa-arrow-right" style="color: #19191a;"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section3">
+        <div class="box box1">
+            <div class="one">Design & Frontend</div>
+            <div class="two">
+                <p class="p14">What's Your Game? <i class="fa-solid fa-arrow-right p15" style="color: #fc0341;"></i></p>
+            </div>
+        </div>
+        <div class="box box2">
+            <div class="one">Design & Frontend</div>
+            <div class="two">
+                <p class="p14">Logo Ideas <i class="fa-solid fa-arrow-right p15" style="color: #fc0341;"></i></p>
+            </div>
+        </div>
+        <div class="box box3">
+            <div class="one">Design & Frontend</div>
+            <div class="two">
+                <p class="p14">Dev System <i class="fa-solid fa-arrow-right p15" style="color: #fc0341;"></i></p>
+            </div>
+        </div>
+        <div class="box box4">
+            <div class="one">Design & Frontend</div>
+            <div class="two">
+                <p class="p14">Design Controvercy <i class="fa-solid fa-arrow-right p15" style="color: #fc0341;"></i>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="section4">
+        <p class="p16">Testimonials</p>
+        <p class="p17">What Clients Say</p>
+        <div class="slider">
+            <div class="pg1">
+                <div class="msg">
+                    <div class="six">
+                        <p class="p18">When our designs need an <br> expert opinion or approval, I <br> know I can rely
+                            on your <br> agency. Thankyou for all your <br> help - I will be recommending <br>you to
+                            everyone!</p>
+                    </div>
+                    <div class="six1"></div>
+                    <p class="p19">John Lewis</p>
+                    <p class="p20">CEO, Designer</p>
+                </div>
+                <div class="msg">
+                    <div class="six">
+                        <p class="p18">This is a great website for any <br> type of creative agency or a <br> designer
+                            to get inspired, <br>educated and simply to see <br> other designer's works. <br>Excellent
+                            Job guys!</p>
+                    </div>
+                    <div class="six2"></div>
+                    <p class="p19">Rita Johnson</p>
+                    <p class="p20">Sales Manager</p>
+                </div>
+                <div class="msg">
+                    <div class="six">
+                        <p class="p18">I know I can count on your <br> service if I need my project <br>done fast and
+                            with the best <br> possible result. I am a regular <br> customer and hope to <br>continue
+                            our work!</p>
+                    </div>
+                    <div class="six3"></div>
+                    <p class="p19">Brian Smith</p>
+                    <p class="p20">Project Manager</p>
+                </div>
+                <div class="msg">
+                    <div class="six">
+                        <p class="p18">When our designs need an <br> expert opinion or approval, I <br> know I can rely
+                            on your <br> agency. Thankyou for all your <br> help - I will be recommending <br>you to
+                            everyone!</p>
+                    </div>
+                    <div class="six1"></div>
+                    <p class="p19">John Lewis</p>
+                    <p class="p20">CEO, Designer</p>
+                </div>
+                <div class="msg">
+                    <div class="six">
+                        <p class="p18">This is a great website for any <br> type of creative agency or a <br> designer
+                            to get inspired, <br>educated and simply to see <br> other designer's works. <br>Excellent
+                            Job guys!</p>
+                    </div>
+                    <div class="six2"></div>
+                    <p class="p19">Rita Johnson</p>
+                    <p class="p20">Sales Manager</p>
+                </div>
+                <div class="msg">
+                    <div class="six">
+                        <p class="p18">I know I can count on your <br> service if I need my project <br>done fast and
+                            with the best <br> possible result. I am a regular <br> customer and hope to <br>continue
+                            our work!</p>
+                    </div>
+                    <div class="six3"></div>
+                    <p class="p19">Brian Smith</p>
+                    <p class="p20">Project Manager</p>
+                </div>
+                <div class="msg">
+                    <div class="six">
+                        <p class="p18">When our designs need an <br> expert opinion or approval, I <br> know I can rely
+                            on your <br> agency. Thankyou for all your <br> help - I will be recommending <br>you to
+                            everyone!</p>
+                    </div>
+                    <div class="six1"></div>
+                    <p class="p19">John Lewis</p>
+                    <p class="p20">CEO, Designer</p>
+                </div>
+            </div>
+        </div>
+        <div class="imagess">
+            <div class="new">
+                <img class="img"
+                    src="https://helion.axiomthemes.com/wp-content/uploads/2019/07/clients-black-1-copyright.png"
+                    alt="">
+            </div>
+            <div class="new">
+                <img class="img"
+                    src="https://helion.axiomthemes.com/wp-content/uploads/2019/07/clients-black-8-copyright.png"
+                    alt="">
+            </div>
+            <div class="new">
+                <img class="img"
+                    src="https://helion.axiomthemes.com/wp-content/uploads/2019/07/clients-black-3-copyright.png"
+                    alt="">
+            </div>
+            <div class="new">
+                <img class="img"
+                    src="https://helion.axiomthemes.com/wp-content/uploads/2019/07/clients-black-4-copyright.png"
+                    alt="">
+
+            </div>
+            <div class="new">
+                <img class="img"
+                    src="https://helion.axiomthemes.com/wp-content/uploads/2019/07/clients-black-5-copyright.png"
+                    alt="">
+            </div>
+            <div class="new">
+                <img class="img"
+                    src="https://helion.axiomthemes.com/wp-content/uploads/2019/07/clients-black-6-copyright.png"
+                    alt="">
+            </div>
+            <div class="new">
+                <img class="img"
+                    src="https://helion.axiomthemes.com/wp-content/uploads/2019/07/clients-black-7-copyright.png"
+                    alt="">
+            </div>
+            <div class="new">
+                <img class="img"
+                    src="https://helion.axiomthemes.com/wp-content/uploads/2019/07/clients-black-2-copyright.png"
+                    alt="">
+            </div>
+        </div>
+    </div>
+    <div class="section5">
+            <div class="blk1"></div>
+            <p class="p22">Latest Articles</p>
+            <p class="p23">From the Blog</p>
+            <div class="animation">
+                <div class="ani1">
+                    <div class="animate1">
+                        <img class="pic"
+                            src="https://helion.axiomthemes.com/wp-content/uploads/2019/04/post-5-copyright-740x580.jpg"
+                            alt="">
+                    </div>
+                    <p class="p24">News <b class="p25">April 9,2019</b></p>
+                    <p class="p26">World's most famous app <br> developers and designers</p>
+                    <p class="p27">Read more</p>
+                </div>
+                <div class="ani1">
+                    <div class="animate2">
+                        <img class="pic"
+                            src="https://helion.axiomthemes.com/wp-content/uploads/2019/04/post-6-copyright-740x580.jpg"
+                            alt="">
+                    </div>
+                    <p class="p24">News <b class="p25">April 6,2019</b></p>
+                    <p class="p26">Basketball game approach to<br> creating modern design</p>
+                    <p class="p27">Read more</p>
+                </div>
+                <div class="ani1">
+                    <div class="animate3">
+                        <img class="pic"
+                            src="https://helion.axiomthemes.com/wp-content/uploads/2019/04/post-13-copyright-740x580.jpg"
+                            alt="">
+                    </div>
+                    <p class="p24">Inspiration <b class="p25">February 2,2019</b></p>
+                    <p class="p26">Getting inspired for a re-<br> branding project</p>
+                    <p class="p27">Read more</p>
+                </div>
+            </div>
+        </div>
+        <div class="section6">
+            <div class="blk1"></div>
+            <p class="p22">Newsletter Sign Up</p>
+            <p class="p23">Enter your email</p>
+            <div class="circle"></div>
+            <p class="p28">i agree to the <br>
+                privacy policy.</p>
+            <i class="fa-solid fa-arrow-right ri8" style="color: #19191ac3;"></i>
+        </div> 
+        <div class="section7">
+            <div class="red">
+                <div class="rock">
+                    <i class="fa-solid fa-paper-plane hyn" style="color: #f1f4f8;"></i>
+                </div>
+                <p class="tex1">Get In Touch</p>
+                <p class="tex2">Have a Project?</p>
+                <button class="btn2">Get In Touch</button>
+            </div>
+            <div class="orange">
+                <div class="rock">
+                    <i class="fa-solid fa-lightbulb hyn" style="color: #ffffff;"></i>
+                </div>
+                <p class="tex1">Contact Us</p>
+                <p class="tex2">Want To Work With Us?</p>
+                <button class="btn2">Send Resume</button>
+            </div>
+        </div>
+     <div class="section8">
+        <div class="index">
+            <div class="logo1">
+                <img class="img" src="https://helion.axiomthemes.com/wp-content/uploads/2019/05/logo-inverse.png"
+                    alt="">
+            </div>
+            <div class="office">
+                <p class="tex3">Office</p>
+                <p class="tex4">2700 Fire Mesa StLas <br>
+                    Vegas, NV 89128</p>
+                <p class="tex5">info@example.com</p>
+                <p class="tex6">+ 1 800 123 45 67</p>
+            </div>
+            <div class="links">
+                <p class="tex3">Links</p>
+                <ul class="ull">
+                    <li>Blog</li>
+                    <li>About Us</li>
+                    <li>Shop</li>
+                    <li>Contacts</li>
+                </ul>
+            </div>
+            <div class="socials">
+                <p class="tex3">Socials</p>
+                <div class="for">
+                    <div class="foe1">
+                        <i class="fa-brands fa-facebook-f" style="color: #ffffff;"></i>
+                    </div>
+                    <div class="foe1">
+                        <i class="fa-brands fa-twitter" style="color: #ffffff;"></i>
+                    </div>
+                    <div class="foe1">
+                        <i class="fa-solid fa-basketball" style="color: #ffffff;"></i>
+                    </div>
+                    <div class="foe1">
+                        <i class="fa-brands fa-behance" style="color: #ffffff;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="borderbtm"></div>
+        <p class="tex7">AxiomThemes © 2023. All Rights Reserved.</p>
+    </div>
+
+
+
+    <script>
+        AOS.init();
+    </script>
+
+
+
+</body>
+
+</html>
